@@ -1,0 +1,41 @@
+
+
+@keyframes slide
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-100%)
+        
+        
+
+.logos
+  overflow: hidden
+  height: 105px
+  padding: 94px 0
+  white-space: nowrap
+  position: relative
+
+
+.logos:before,
+.logos:after
+  content: ""
+  position: absolute
+  top: 0
+  width: 250px
+  height: 100%
+  z-index: 2
+
+
+
+.logos:hover .logos-slide
+    animation-play-state: paused
+  
+  
+
+.logos-slide
+    display: inline-block
+    animation: 35s slide infinite linear
+
+.logos-slide img
+  height:50px
+  margin: 0 30px

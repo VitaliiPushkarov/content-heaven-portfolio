@@ -1,0 +1,49 @@
+.faq_list
+    display: flex
+    flex-flow: column
+    justify-content: flex-start
+    align-content: stretch
+    flex-wrap: wrap
+    &_item
+        &_title
+            display: inline-flex
+            justify-content: space-between
+        &_descr
+            color: $color-main
+            font-size: 14px
+            font-weight: $font-regular
+        span
+            font-size: $font-size-base
+            font-weight: $font-regular
+        &_heading
+            font-weight: $medium
+            font-size: $fz-20
+            color: $color-main
+        &_text
+            display: flex
+            flex-flow: column
+            flex-wrap: wrap
+            p
+                padding: 20px 0
+    &_btn
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 40px
+    .collapsible 
+        cursor: pointer
+        padding: 20px
+        width: 100%
+        text-align: left
+        border-bottom: 0.4px solid #6F6E6E
+        &::after
+            content: url('../img/infinity-svgrepo-com 2.svg')
+            transition: $transition
+    .active
+        &::after
+            transform: rotate(-90deg)
+            fill: $color-white
+    .content 
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.4s ease-out
